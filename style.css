@@ -281,9 +281,9 @@
     background: rgb(81, 9, 120);
 }
 
-/* HERO SECTION */
+
 .hero {
-    background-image: url("./img/hero.png");
+    background-image: url("./img/HERO.png");
     height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -295,8 +295,32 @@
 
 .hero__content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 0 20px;
+}
+
+.hero__titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__title {
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.hero_sub-title {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
 }
 
 .hero__btns {
@@ -324,6 +348,104 @@
 .hero__btn-cottages:hover,
 .hero__btn-gallery:hover {
     background: rgb(81, 9, 120);
+}
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        height: 600px;
+    }
+    
+    .hero__title {
+        font-size: 72px;
+    }
+    
+    .hero_sub-title {
+        font-size: 36px;
+    }
+    
+    .hero__btns {
+        margin-top: 150px;
+    }
+}
+
+/* Планшеты (до 768px) */
+@media (max-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+    
+    .hero__title {
+        font-size: 56px;
+    }
+    
+    .hero_sub-title {
+        font-size: 28px;
+    }
+    
+    .hero__btns {
+        margin-top: 100px;
+        gap: 20px;
+    }
+    
+    .hero__btn-cottages,
+    .hero__btn-gallery {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+    .hero {
+        height: 100vh;
+        min-height: 500px;
+    }
+    
+    .hero__title {
+        font-size: 50px;
+    }
+    
+    .hero_sub-title {
+        font-size: 30px;
+        
+    }
+    
+    .hero__btns {
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 80px;
+        width: 100%;
+    }
+    
+    .hero__btn-cottages,
+    .hero__btn-gallery {
+        padding: 15px 30px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Очень маленькие экраны (до 360px) */
+@media (max-width: 360px) {
+    .hero__title {
+        font-size: 32px;
+    }
+    
+    .hero_sub-title {
+        font-size: 18px;
+    }
+    
+    .hero__btns {
+        margin-top: 60px;
+    }
+    
+    .hero__btn-cottages,
+    .hero__btn-gallery {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
 }
 
 /* FACILITIES */
@@ -418,6 +540,15 @@
     gap: 10px;
     margin-bottom: 10px;
 }
+.footer__sub__title a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer__sub__title a:hover {
+    text-decoration: underline;
+}
 
 .footer__numbers img {
     max-width: 24px;
@@ -447,13 +578,13 @@
         padding: 12px 12px;
     }
 
-    .hero {
+    /* .hero {
         height: 600px;
     }
 
     .hero__btns {
         margin-top: 150px;
-    }
+    } */
 
     .facilities__content {
         row-gap: 80px;
@@ -471,6 +602,7 @@
 
 /* ========== MOBILE (below 768px) ========== */
 @media (max-width: 768px) {
+
     /* Header */
     .header {
         height: auto;
@@ -501,7 +633,7 @@
     }
 
     /* Hero */
-    .hero {
+    /* .hero {
         height: 500px;
         background-position: center center;
     }
@@ -518,7 +650,7 @@
         padding: 12px 35px;
         font-size: 18px;
         width: 200px;
-    }
+    } */
 
     /* Facilities */
     .facilities__content {
@@ -570,6 +702,7 @@
 
 /* ========== SMALL MOBILE (below 480px) ========== */
 @media (max-width: 480px) {
+
     /* Header */
     .header__content {
         margin-top: 15px;
@@ -592,10 +725,12 @@
     }
 
     /* Hero - ФИКС ДЛЯ ФОТО */
-    .hero {
+    /* .hero {
         height: 400px;
-        background-position: center 30%; /* Показываем верхнюю часть */
-        background-size: cover; /* Покрываем весь экран */
+        background-position: center 30%;
+        /* Показываем верхнюю часть */
+        background-size: cover;
+        /* Покрываем весь экран */
     }
 
     .hero__btns {
@@ -608,7 +743,7 @@
         padding: 10px 30px;
         font-size: 16px;
         width: 180px;
-    }
+    } */
 
     /* Facilities */
     .facilities__content {
@@ -1535,12 +1670,22 @@
     color: #fff;
 }
 
-.contact__under-par {
+/* .contact__under-par {
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
     color: #fff;
+} */
+
+.contact__under-par {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact__under-par:hover {
+    text-decoration: underline;
 }
 
 .contact__content {
@@ -1597,9 +1742,10 @@
         gap: 15px;
     }
 
-    .contact__content > img {
+    .contact__content>img {
         max-width: 100%;
-        order: -1; /* Картинка будет сверху на мобильных */
+        order: -1;
+        /* Картинка будет сверху на мобильных */
     }
 }
 
@@ -2315,64 +2461,67 @@ video {
     display: block;
 }
 
-@media (max-width: 650px){
-    .btns{
+@media (max-width: 650px) {
+    .btns {
         gap: 20px;
     }
+
     .header__btn-cottages,
     .header__btn-gallary,
     .header__btn-contact,
-    .header__btn-home{
+    .header__btn-home {
         font-size: 18px;
     }
 }
 
-@media (max-width: 500px){
-    .btns{
+@media (max-width: 500px) {
+    .btns {
         gap: 15px;
     }
+
     .header__btn-cottages,
     .header__btn-gallary,
     .header__btn-contact,
-    .header__btn-home{
+    .header__btn-home {
         font-size: 17px;
     }
 }
 
-@media (max-width:920px){
-    .facilities__cards{
+@media (max-width:920px) {
+    .facilities__cards {
         flex-wrap: wrap;
     }
 }
 
-@media (max-width:1035px){
-    .footer__start{
+@media (max-width:1035px) {
+    .footer__start {
         flex-direction: column;
     }
 }
 
-@media (max-width:570px){
-    .maps{
+@media (max-width:570px) {
+    .maps {
         max-width: 270px;
         max-height: 300px;
     }
-    .footer__content{
+
+    .footer__content {
         flex-direction: column;
         align-items: center;
         row-gap: 40px;
     }
 }
 
-@media (max-width:1320px){
-    .cottages__cards{
+@media (max-width:1320px) {
+    .cottages__cards {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
 }
 
-@media (max-width:1400px){
-    .c161__btn{
+@media (max-width:1400px) {
+    .c161__btn {
         font-size: 20px;
     }
 }

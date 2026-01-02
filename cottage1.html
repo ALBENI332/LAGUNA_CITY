@@ -68,7 +68,7 @@
                     <p class="c161__badrooms">2 bedrooms</p>
                     <h2 class="c161__price">$150</h2>
                     <p class="c161__night">per night</p>
-                    <button class="c161__btn" onclick="showChoicePanel()">Book the cottage</button>
+                    <button class="c161__btn" onclick="goToWhatsApp">Book the cottage</button>
                     <br><br>
                     <div class="dec">
                         <div class="description-container">
@@ -116,10 +116,10 @@
                         </div>
                     </div>
                     <div class="overlay" onclick="hideChoicePanel()"></div>
-                    <div class="choice-panel" id="choicePanel">
+                    <!-- <div class="choice-panel" id="choicePanel">
                         <button onclick="goToTelegram()">Telegram</button>
                         <button onclick="goToWhatsApp()">WhatsApp</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -136,7 +136,7 @@
                         <h3 class="footer__title">
                             Contact us
                         </h3>
-                        <div class="footer__numbers">
+                        <!-- <div class="footer__numbers">
                             <img src="./img/telefon.png" alt="">
                             <p class="footer__sub__title">+996 (550) 98 21 21 <br> +996 (555) 52 08 58</p>
                         </div>
@@ -149,6 +149,30 @@
                         <div class="footer__numbers">
                             <img src="./img/telega.png" alt="">
                             <p class="footer__sub__title">+996 (550) 98 21 21 <br> +996 (555) 52 08 58</p>
+                        </div> -->
+
+                        <div class="footer__numbers">
+                            <img src="./img/telefon.png" alt="">
+                            <div class="footer__sub__title">
+                                <a href="tel:+996550982121">+996 (550) 98 21 21</a> <br>
+                                <a href="tel:+996555520858">+996 (555) 52 08 58</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__numbers">
+                            <img src="./img/uim_whatsapp.png" alt="">
+                            <div class="footer__sub__title">
+                                <a href="https://wa.me/996550982121">+996 (550) 98 21 21</a> <br>
+                                <a href="https://wa.me/996555520858">+996 (555) 52 08 58</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__numbers">
+                            <img src="./img/telega.png" alt="">
+                            <div class="footer__sub__title">
+                                <a href="https://t.me/+996550982121">+996 (550) 98 21 21</a> <br>
+                                <a href="https://t.me/+996555520858">+996 (555) 52 08 58</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -241,56 +265,52 @@
         document.getElementById('choicePanel').style.display = 'none';
         document.querySelector('.overlay').style.display = 'none';
     }
-    function goToTelegram() {
-        window.location.href = "https://t.me/";
-        hideChoicePanel();
-    }
     function goToWhatsApp() {
         window.location.href = "https://wa.me/+996550982121";
         hideChoicePanel();
     }
 
     function openVideo() {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('cottageVideo');
-            modal.style.display = 'flex';
-            video.play();
-        }
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('cottageVideo');
+        modal.style.display = 'flex';
+        video.play();
+    }
 
-        function closeVideo() {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('cottageVideo');
-            video.pause();
-            video.currentTime = 0;
-            modal.style.display = 'none';
-        }
+    function closeVideo() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('cottageVideo');
+        video.pause();
+        video.currentTime = 0;
+        modal.style.display = 'none';
+    }
 
-        // Обработчик для крестика - используем addEventListener вместо onclick
-        document.addEventListener('DOMContentLoaded', function() {
-            const closeBtn = document.getElementById('closeBtn');
-            const modal = document.getElementById('videoModal');
+    // Обработчик для крестика - используем addEventListener вместо onclick
+    document.addEventListener('DOMContentLoaded', function () {
+        const closeBtn = document.getElementById('closeBtn');
+        const modal = document.getElementById('videoModal');
 
-            // Клик по крестику
-            closeBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                closeVideo();
-            });
-
-            // Закрытие модального окна при клике вне видео
-            modal.addEventListener('click', function(event) {
-                if (event.target === this) {
-                    closeVideo();
-                }
-            });
-
-            // Закрытие по клавише Escape
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                    closeVideo();
-                }
-            });
+        // Клик по крестику
+        closeBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeVideo();
         });
+
+        // Закрытие модального окна при клике вне видео
+        modal.addEventListener('click', function (event) {
+            if (event.target === this) {
+                closeVideo();
+            }
+        });
+
+        // Закрытие по клавише Escape
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeVideo();
+            }
+        });
+    });
 
 </script>
 
