@@ -67,7 +67,7 @@
                     <p class="c161__badrooms">1 bedrooms</p>
                     <h2 class="c161__price">$90</h2>
                     <p class="c161__night">per night</p>
-                    <button class="c161__btn" onclick="showChoicePanel()">Book the cottage</button>
+                    <button class="c161__btn" onclick="goToWhatsApp()">Book the cottage</button>
                     <br><br>
                     <div class="dec">
                         <div class="description-container">
@@ -115,11 +115,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="overlay" onclick="hideChoicePanel()"></div>
+                <!-- <div class="overlay" onclick="hideChoicePanel()"></div>
                 <div class="choice-panel" id="choicePanel">
                     <button onclick="goToTelegram()">Telegram</button>
                     <button onclick="goToWhatsApp()">WhatsApp</button>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -136,28 +136,28 @@
                             Contact us
                         </h3>
                         <div class="footer__numbers">
-    <img src="./img/telefon.png" alt="">
-    <div class="footer__sub__title">
-        <a href="tel:+996550982121">+996 (550) 98 21 21</a> <br>
-        <a href="tel:+996555520858">+996 (555) 52 08 58</a>
-    </div>
-</div>
+                            <img src="./img/telefon.png" alt="">
+                            <div class="footer__sub__title">
+                                <a href="tel:+996550982121">+996 (550) 98 21 21</a> <br>
+                                <a href="tel:+996555520858">+996 (555) 52 08 58</a>
+                            </div>
+                        </div>
 
-<div class="footer__numbers">
-    <img src="./img/uim_whatsapp.png" alt="">
-    <div class="footer__sub__title">
-        <a href="https://wa.me/996550982121">+996 (550) 98 21 21</a> <br>
-        <a href="https://wa.me/996555520858">+996 (555) 52 08 58</a>
-    </div>
-</div>
+                        <div class="footer__numbers">
+                            <img src="./img/uim_whatsapp.png" alt="">
+                            <div class="footer__sub__title">
+                                <a href="https://wa.me/996550982121">+996 (550) 98 21 21</a> <br>
+                                <a href="https://wa.me/996555520858">+996 (555) 52 08 58</a>
+                            </div>
+                        </div>
 
-<div class="footer__numbers">
-    <img src="./img/telega.png" alt="">
-    <div class="footer__sub__title">
-        <a href="https://t.me/+996550982121">+996 (550) 98 21 21</a> <br>
-        <a href="https://t.me/+996555520858">+996 (555) 52 08 58</a>
-    </div>
-</div>
+                        <div class="footer__numbers">
+                            <img src="./img/telega.png" alt="">
+                            <div class="footer__sub__title">
+                                <a href="https://t.me/+996550982121">+996 (550) 98 21 21</a> <br>
+                                <a href="https://t.me/+996555520858">+996 (555) 52 08 58</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <iframe class="maps"
@@ -226,60 +226,60 @@
         });
     });
 
-    showSlide(slideIndex);
+    // showSlide(slideIndex);
 
-    function toggleDescription() {
-        const content = document.getElementById('descriptionContent');
-        content.classList.toggle('active');
-    }
+    // function toggleDescription() {
+    //     const content = document.getElementById('descriptionContent');
+    //     content.classList.toggle('active');
+    // }
 
     // function scrollToBottom() {
     //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     // }
 
 
-    function toggleDescription() {
-        const content = document.getElementById('descriptionContent');
-        content.classList.toggle('active');
-    }
-    function showChoicePanel() {
-        document.getElementById('choicePanel').style.display = 'block';
-        document.querySelector('.overlay').style.display = 'block';
-    }
-    function hideChoicePanel() {
-        document.getElementById('choicePanel').style.display = 'none';
-        document.querySelector('.overlay').style.display = 'none';
-    }
-    function goToTelegram() {
-        window.location.href = "https://web.telegram.org/k/#@aidarische";
-        hideChoicePanel();
-    }
+    // function toggleDescription() {
+    //     const content = document.getElementById('descriptionContent');
+    //     content.classList.toggle('active');
+    // }
+    // function showChoicePanel() {
+    //     document.getElementById('choicePanel').style.display = 'block';
+    //     document.querySelector('.overlay').style.display = 'block';
+    // }
+    // function hideChoicePanel() {
+    //     document.getElementById('choicePanel').style.display = 'none';
+    //     document.querySelector('.overlay').style.display = 'none';
+    // }
+    // function goToTelegram() {
+    //     window.location.href = "https://web.telegram.org/k/#@aidarische";
+    //     hideChoicePanel();
+    //}
     function goToWhatsApp() {
         window.location.href = "https://wa.me/+996550982121";
         hideChoicePanel();
     }
 
     function openVideo() {
-    const modal = document.getElementById('videoModal');
-    const video = document.getElementById('cottageVideo');
-    modal.style.display = 'flex';
-    video.play();
-  }
-
-  function closeVideo() {
-    const modal = document.getElementById('videoModal');
-    const video = document.getElementById('cottageVideo');
-    video.pause();
-    video.currentTime = 0;
-    modal.style.display = 'none';
-  }
-
-  // Закрытие модального окна при клике вне видео
-  document.getElementById('videoModal').addEventListener('click', function(event) {
-    if (event.target === this) {
-      closeVideo();
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('cottageVideo');
+        modal.style.display = 'flex';
+        video.play();
     }
-  });
+
+    function closeVideo() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('cottageVideo');
+        video.pause();
+        video.currentTime = 0;
+        modal.style.display = 'none';
+    }
+
+    // Закрытие модального окна при клике вне видео
+    document.getElementById('videoModal').addEventListener('click', function (event) {
+        if (event.target === this) {
+            closeVideo();
+        }
+    });
 </script>
 
 </html>
